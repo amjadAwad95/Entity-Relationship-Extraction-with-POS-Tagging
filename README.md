@@ -30,11 +30,16 @@ Additionally, ensure you have Apache Spark configured.
 To get started, import the necessary modules in Scala:
 
 ```scala
-import com.johnsnowlabs.nlp.base._
-import com.johnsnowlabs.nlp.annotator._
-import com.johnsnowlabs.nlp.embeddings._
+import com.johnsnowlabs.nlp.annotator.{
+  Tokenizer,
+  WordEmbeddingsModel,
+  SentenceDetector,
+  NerCrfModel
+}
+import com.johnsnowlabs.nlp.annotators.pos.perceptron.PerceptronModel
+import com.johnsnowlabs.nlp.{DocumentAssembler, SparkNLP}
 import org.apache.spark.ml.Pipeline
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions._
 ```
 
 ## Documentation & Resources
@@ -47,7 +52,4 @@ import org.apache.spark.sql.SparkSession
 3. Transform the dataset using the pipeline.
 4. Extract and analyze the `NER` and `POS` attributes.
 5. Print the relevant results and insights.
-
-## License
-This project follows an open-source license. See the `LICENSE` file for details.
 
