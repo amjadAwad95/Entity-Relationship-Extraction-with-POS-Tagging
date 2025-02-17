@@ -18,7 +18,10 @@ This project demonstrates the use of [Spark NLP](https://github.com/JohnSnowLabs
 Ensure you have Spark NLP installed in your environment. You can add it to your Scala project using:
 
 ```scala
-dependencyOverrides += "com.johnsnowlabs.nlp" %% "spark-nlp" % "latest.release"
+libraryDependencies += "org.apache.spark" %% "spark-core" % "3.5.3"
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.5.3"
+libraryDependencies += "org.apache.spark" %% "spark-mllib" % "3.5.3"
+libraryDependencies += "com.johnsnowlabs.nlp" %% "spark-nlp-silicon" % "5.5.0"
 ```
 
 Additionally, ensure you have Apache Spark configured.
